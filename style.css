@@ -53,7 +53,7 @@ main {
 
 
     transform: translateX(600px);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.5s ease-in-out;
 }
 
 .testim {
@@ -132,12 +132,18 @@ main {
 }
 
 .buttons a {
-    opacity: 1;
     transition: opacity 0.1s ease-in;
     padding: 10px;
 }
 .buttons a:hover {
     opacity: 0.4;
+}
+
+.btn-op {
+    opacity: 0.4;
+}
+.btn-solid {
+    opacity: 1;
 }
 
 
