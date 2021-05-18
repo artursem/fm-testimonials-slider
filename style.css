@@ -53,7 +53,7 @@ main {
 
 
     transform: translateX(600px);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s cubic-bezier(.05,.63,.18,1.08)
 }
 
 .testim {
