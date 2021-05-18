@@ -27,7 +27,7 @@ body {
 div, main {
     border: 1px dashed pink;
 }
-#########################3 */
+########################3 */
 
 main {
     width: 1200px;
@@ -35,16 +35,25 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-
+    align-items: center;
     padding: 8rem;
     /* ###################### */
-    box-shadow: 0.4rem 0.4rem 2rem .1rem rgba(0,0,0,0.2);
-
-     
+    box-shadow: 0.4rem 0.4rem 2rem .1rem rgba(0,0,0,0.2); 
     background: url('./images/pattern-quotes.svg') 20% 30% no-repeat,
                 url('./images/pattern-bg.svg') center right 50px no-repeat,
                 url('./images/pattern-curve.svg') bottom left no-repeat;
+
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+
+    transform: translateX(505px);
+    transition: transform 0.3s ease-in;
 }
 
 .testim {
@@ -54,9 +63,10 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
 
-    
-    
+.moveleft {
+    transform: translateX(-1500px);
 }
 
 .testim__text {
@@ -94,7 +104,7 @@ main {
 .buttons {
     position: relative;
     top: -20px;
-    left: -120px;
+    left: 100px;
 
     height: 40px;
     width: 100px;
@@ -107,6 +117,21 @@ main {
     justify-content: space-around;
     align-items: center;
 
+}
+
+.arrow {
+    width: 12px;
+    position: relative;
+    top: 2px;
+}
+
+.buttons a {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+    padding: 10px;
+}
+.buttons a:hover {
+    opacity: 0.4;
 }
 
 
