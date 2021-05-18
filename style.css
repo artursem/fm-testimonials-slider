@@ -52,7 +52,7 @@ main {
     justify-content: flex-start;
 
 
-    transform: translateX(505px);
+    transform: translateX(600px);
     transition: transform 0.3s ease-in;
 }
 
@@ -63,10 +63,16 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    margin: 0 100px 0 100px;
 }
 
 .moveleft {
-    transform: translateX(-1500px);
+    transform: translateX(-600px);
+}
+
+.moveright {
+    transform: translateX(600px);
 }
 
 .testim__text {
@@ -136,8 +142,3 @@ main {
 
 
 
-
-/*  ############## */
-#testim_2 {
-    display: none;
-}
