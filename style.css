@@ -16,72 +16,35 @@ body {
     color: var(--dbl);
     background-color: #fff;
 
-    /* ################# */
+
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* #########################3 
-div, main {
+/* div, main {
     border: 1px dashed pink;
-}
-########################3 */
+} */
+
 
 main {
-    width: 1200px;
-    min-height: 800px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8rem;
-    /* ###################### */
-    box-shadow: 0.4rem 0.4rem 2rem .1rem rgba(0,0,0,0.2); 
-    background: url('./images/pattern-quotes.svg') 20% 30% no-repeat,
-                url('./images/pattern-bg.svg') center right 50px no-repeat,
-                url('./images/pattern-curve.svg') bottom left no-repeat;
-
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .slide {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
-
-    transform: translateX(600px);
-    transition: transform 0.5s cubic-bezier(.05,.63,.18,1.08)
 }
 
 .testim {
     display: flex;
     /*  ##################################3 */
-
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    margin: 0 100px 0 100px;
 }
-
-.moveleft {
-    transform: translateX(-600px);
-}
-
-.moveright {
-    transform: translateX(600px);
-}
-
-.testim__text {
-    z-index: 1;
-    position: relative;
-    left: 100px;
-    width: 510px;
-}
-
 
 .testim p {
     font-weight: 300;
@@ -102,16 +65,11 @@ main {
 
 .photo {
     /*  ##################### */
-    width: 500px;
     height: auto;
-    box-shadow: 0.1rem 0.1rem 2rem .1rem rgba(0,0,0,0.2);
+    box-shadow: 0.1rem 0.1rem 2rem .1rem rgba(0,0,0,0.4);
 }
 
 .buttons {
-    position: relative;
-    top: -20px;
-    left: 100px;
-
     height: 40px;
     width: 100px;
     border-radius: 30px;
@@ -146,5 +104,98 @@ main {
     opacity: 1;
 }
 
+@media (max-width: 999px) {
+
+    main {
+        width: 100vw;
+        min-height: 100vh;
+
+        flex-direction: column-reverse;
+
+        background: url('./images/pattern-curve.svg') bottom left no-repeat;
+
+        background-size: 80%, 100%;
+
+    }
+    .slide {
+        transform: translateX(600px);
+        transition: transform 0.5s cubic-bezier(.05,.63,.18,1.08);
+    }
+    .testim {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px; 
+
+        margin: 0 350px 0 350px;
+        text-align: center;
+    }
+    .testim__photo {
+        background: url('./images/pattern-bg.svg') no-repeat top center;
+        background-size:  100% 100% ;
+        padding: 2rem;
+    }
+    .testim__text {
+        padding: 3rem;
+
+        background: url('./images/pattern-quotes.svg') top center no-repeat;
+        background-size: 120px auto;
+    }
+
+    .photo {
+        width: 400px;
+    }
+
+    .buttons {
+        position: relative;
+        top: -20px;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        width: 1200px;
+        min-height: 800px;
+
+        flex-direction: column;
+
+        padding: 8rem;
+        background: url('./images/pattern-quotes.svg') 20% 30% no-repeat,
+                    url('./images/pattern-bg.svg') center right 50px no-repeat,
+                    url('./images/pattern-curve.svg') bottom left no-repeat;
+        box-shadow: 0.4rem 0.4rem 2rem .1rem rgba(0,0,0,0.2); 
+    }
+
+    .slide {
+        transform: translateX(600px);
+        transition: transform 0.5s cubic-bezier(.05,.63,.18,1.08)
+    }
+
+    .testim {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0 100px 0 100px;
+    }
 
 
+
+
+    .testim__text {
+        z-index: 1;
+        position: relative;
+        left: 100px;
+        width: 510px;
+    }
+
+    .photo {
+        width: 500px;
+    }
+
+    .buttons {
+        position: relative;
+        top: -20px;
+        left: -150px;
+    }
+}

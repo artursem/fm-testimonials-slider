@@ -21,6 +21,7 @@ const btnOp = (btn) => {
 
 btnPrev.addEventListener('click', prev);
 btnNext.addEventListener('click', next);
+
 document.addEventListener('keyup', e => {
     if (e.key === "ArrowLeft") {
         prev();
